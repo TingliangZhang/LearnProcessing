@@ -46,8 +46,7 @@ void setup(){
       textAlign(CENTER);
       textSize(25);
       int a = int(random(0,2));
-      String a1=X[a];
-      text(a1,120,440);
+      text(X[a],120,440);
       
       fill(50);
       textAlign(CENTER);
