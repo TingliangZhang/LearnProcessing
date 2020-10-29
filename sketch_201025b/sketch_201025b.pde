@@ -2,12 +2,14 @@ PFont myFont;
 void setup(){
   size(600,900);
   myFont=createFont("方正北魏楷书简体.ttf",40,true);
-  String [] X = {"开开心心","赖床","关系家人"};
-  String [] Y = {"愁眉苦脸","熬夜","为难自己"};
+  // String [] X = {"开开心心","赖床","关系家人"};
+  // String [] Y = {"愁眉苦脸","熬夜","为难自己"};
   }
   
   void draw(){
     if(mousePressed){
+      delay(500); //delay 0.5s
+      int R = int(random(0,3));
       background(255);
   
       stroke(100);
@@ -45,8 +47,15 @@ void setup(){
       fill(50);
       textAlign(CENTER);
       textSize(25);
-      int a = int(random(0,2));
-      text(X[a],120,440);
+      // int a = int(random(0,2));
+      // text(X[a],120,440);
+      if(R==0){
+        text("开开心心",120,440);
+      }else if (R == 1) {    //如果随机数是1
+        text("赖床",120,440);
+      } else {                //如果随机数是2
+        text("关系家人",120,440);
+      }
       
       fill(50);
       textAlign(CENTER);
